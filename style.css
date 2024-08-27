@@ -12,24 +12,3 @@
     rgba(168, 201, 179, 0.6) 55%,
     rgba(205, 247, 213, 0.6) 75%,
     #c1edc7f5 100%
-  );
-  box-shadow: 0 0 25px rgba(175, 218, 181, 0.1);
-  inset: 0 0 1px rgba(255, 255, 255, 0.6);
-}
-
-.img-price{
-  position: relative;
-}
-.price-overlay{
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  background: #fff7;
-  padding: 4px 20px;
-  border-radius: 8px;
-}
-.container {
-  /* display: flex; */
-  display: grid;
-  
-}
