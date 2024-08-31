@@ -1,14 +1,62 @@
-.navbar {
-  /* background-color: rgb(25, 175, 25);
-  color: black;
-  backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 30px rgba(173, 209, 167, 0.37);
-  border:2px solid rgba(186, 241, 199, 0.18); */
-  background-size: cover;
+.nav-header {
+  height: inherit;
+  background-color: transparent!;
+  position: relative;
+  z-index: 10;
+   
+}
 
-  background: linear-gradient(
-    90deg,
-    rgba(186, 228, 188, 0.619) 20%,
-    rgba(168, 201, 179, 0.6) 55%,
-    rgba(205, 247, 213, 0.6) 75%,
-    #c1edc7f5 100%
+.nav-header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 68px;
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(126, 211, 33, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.brand-logo-img{
+  filter: drop-shadow(0 0 6px rgb(0, 0, 0));
+}
+.search-group{
+  position: relative;
+}
+.search-group input{
+  border-radius: 20px;
+}
+.search-group button{
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.slogan-parent {
+  position: relative;
+  z-index: -1;
+}
+
+.slogan {
+  position: absolute;
+  z-index: 1;
+  bottom: calc((600px / 2) - 50px);
+  left: calc((100vw / 2) - 450px);
+  text-align: center;
+  color: rgb(237, 227, 227);
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 4px rgba(218, 212, 212, 0.452);
+}
+
+.slogan::before {
+  position: absolute;
+  width: 894px;
+  height: 200px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: blur(4px);
+}

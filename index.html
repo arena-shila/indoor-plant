@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>indoor plant</title>
     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    
     <link rel="stylesheet" href="style.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <!-- js cdn bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -25,12 +26,12 @@
     ></script>
   </head>
   <body>
-    <!--   navbar starts -->
+    <!-- navbar starts -->
     <header class="sticky-top" >
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid" ms-4>
+      <nav class="navbar navbar-expand-lg nav-header">
+        <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="assets/logo.png" alt="" height="40" />
+            <img class="brand-logo-img" src="assets/logo.png" alt="brands-logo" height="40"/>
           </a>
           <button
             class="navbar-toggler"
@@ -44,9 +45,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Plant.html">plants</a>
@@ -79,23 +80,18 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"> New Arrivals</a>
               </li>
-              <!-- <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Tools</a>
-        </li> -->
             </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+            <form>
+              
+                <label class="formn-label d-flex search-group">
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search">
+                  <button class="btn btn-success fa fa-search"></button>
+              </label>
+                
             </form>
             <a class="navbar-brand" href="#">
               <img src="assets/Add to card.png" alt="" height="40" />
             </a>
-
             <div>
               <a
                 href="#"
@@ -129,33 +125,46 @@
       class="carousel slide"
       data-bs-ride="carousel"
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+      <div class="carousel-inner  ">
+        <div class="carousel-item active slogan-parent">
           <img
-            src="assets/image 34.png"
+            src="assets/background.jpg"
             class="d-block w-100"
             alt="..."
             width="2121px"
             height="600vh"
           />
+          <div class="slogan">
+            <h1>Nurture Your Home with Nature</h1>
+            <p class="display-2" style="font-size: 2rem;">Transform Your Space with Dharaplant: Indoor Greenery, Delivered.</p>
+          </div>
+          
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item slogan-parent">
           <img
-            src="assets/img1.jpg"
+            src="assets/background2.jpg"
             class="d-block w-100"
             alt="plants"
             width="2121px"
             height="600vh"
           />
+          <div class="slogan">
+            <h1>Nurture Your Home with Nature</h1>
+            <p class="display-2 bg-tertiary" style="font-size: 2rem;">Transform Your Space with Dharaplant: Indoor Greenery, Delivered.</p>
+          </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item slogan-parent">
           <img
-            src="assets/plant.jpg.png"
+            src="assets/background3.jpg"
             class="d-block w-100"
             alt=""
             width="2121px"
             height="600vh"
           />
+          <div class="slogan">
+            <h1> Greenery, Naturally at Home</h1>
+            <p class="display-2 bg-tertiary" style="font-size: 2rem;">Transform Your Space with Dharaplant: Indoor Greenery, Delivered.</p>
+          </div>
         </div>
       </div>
       <button
@@ -598,6 +607,7 @@
             <label for="Rabbit Resstant">Rabbit Resstant</label><br />
           </form>
         </div>
+        
         <!-- Featured categories -->
         <div class="col-9 border-start">
           <div class="row border-bottom pb-2">
@@ -651,7 +661,7 @@
             <div class="col-4">
               <div class="card">
                 <img
-                  src="assets/asset 30.jpeg"
+                  src="assets/asset 19.jpeg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -668,7 +678,7 @@
             <div class="col-4">
               <div class="card">
                 <img
-                  src="assets/asset 91.jpeg"
+                  src="assets/asset 96.jpeg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -705,7 +715,7 @@
             <div class="col-4">
               <div class="card">
                 <img
-                  src="assets/asset 10.jpeg"
+                  src="tools-assets/Untitled-1.jpg"
                   class="card-img-top"
                   alt="..."
                 />
@@ -729,7 +739,7 @@
                   <p class="card-text">
                     799.00 <br>
                     Amulya Farms Bamboo <br>
-                    Lucky Wood Good Luck live plant 
+                    Lucky Wood Plant
       
                   </p>
                 </div>
@@ -738,7 +748,7 @@
             <div class="col-4">
               <div class="card">
                 <img
-                  src="assets/asset 15.jpeg"
+                  src="assets/asset 30.jpeg"
                   class="card-img-top"
                   alt="..."
                 >
@@ -753,176 +763,116 @@
                 </div>
               </div>
             </div>
-             
-          
-        </div>
-        <!--  -->
-        <div class="row border-bottom pb-2">
-          <h2>Most Wished for</h2>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 30.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
+          </div>
+          <div class="row border-bottom pb-2">
+            <h2>Most Wished for</h2>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/asset A.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Rs. 450.00 <br>
+                    
+                    Dracaena trifasciata
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="tools-assets/asset B.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
                   Rs. 350.00 <br>
-                  
-                  Lucky Bamboo 3
-                  Layer Feng Shui Plant...
-                </p>
+                  Lily Plant
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 91.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                 Rs. 250.00 <br>
-                 Good Luck Jade <br>
-                 Plant with self wateri...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 97.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                RS. 1,449.00 <br>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/assetC.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                  RS. 1,449.00 <br>
 
-                Amulya Farms Lucky 
-                Wood Good Luck Live...
-                </p>
+                  Fukien tea 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row border-bottom pb-2">
+            <h2>Combo</h2>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/asset 17.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Rs. 350.00 <br>
+                    
+                    Lucky Bamboo 3
+                    Layer Feng Shui Plant...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/asset 43.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                  Rs. 250.00 <br>
+                  Good Luck Jade <br>
+                  Plant with self wateri...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/asset 43.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                  RS. 1,449.00 <br>
+
+                  Amulya Farms Lucky 
+                  Wood Good Luck Live...
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-       
-        <div class="row border-bottom pb-2">
-          <h2>Recommended for you</h2>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 30.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Rs. 350.00 <br>
-                  
-                  Lucky Bamboo 3
-                  Layer Feng Shui Plant...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 91.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                 Rs. 250.00 <br>
-                 Good Luck Jade <br>
-                 Plant with self wateri...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 97.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                RS. 1,449.00 <br>
-
-                Amulya Farms Lucky 
-                Wood Good Luck Live...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row border-bottom pb-2">
-          <h2>Recommended for you</h2>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 30.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  Rs. 350.00 <br>
-                  
-                  Lucky Bamboo 3
-                  Layer Feng Shui Plant...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 91.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                 Rs. 250.00 <br>
-                 Good Luck Jade <br>
-                 Plant with self wateri...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <img
-                src="assets/asset 97.jpeg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-text">
-                RS. 1,449.00 <br>
-
-                Amulya Farms Lucky 
-                Wood Good Luck Live...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-       
       </div>
    
-
+    </div>
     <!-- Footer start -->
-    <footer class="py-5">
+    <footer class="py-5 bg-success">
       <div class="container">
         <div class="row">
           <div class="col-6 col-md-2 mb-3">
