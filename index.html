@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>indoor plant</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    
+    <!--  Splide CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <!-- js cdn bootstrap -->
     <script
@@ -24,209 +32,398 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </head>
   <body>
     <!-- navbar starts -->
-    <header class="sticky-top" >
-      <nav class="navbar navbar-expand-lg nav-header">
+    <header class="sticky-top">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light"
+        aria-label="Offcanvas navbar large"
+        id="dhara-plants-nav"
+      >
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img class="brand-logo-img" src="assets/logo.png" alt="brands-logo" height="40"/>
+            <img
+              class="brand-logo-img"
+              src="assets/logo.png"
+              alt="brands-logo"
+              height="40"
+            />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler btn-outline-success rounded-circle py-2"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#myOffcanvasNavbar"
+            aria-controls="myOffcanvasNavbar"
           >
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa fa-user text-success"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Plant.html">plants</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+          <div
+            class="offcanvas offcanvas-end magic-bg"
+            tabindex="-1"
+            id="myOffcanvasNavbar"
+            aria-labelledby="myOffcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="myOffcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-black"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body align-items-md-center">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item d-sm-none d-block">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success rounded-pill ms-md-3 me-md-2 ctas cta-cart"
+                  >
+                    <i class="fa fa-shopping-cart"></i>
+                  </button>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#">Sub Categories</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownTV"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sub Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownOriginal"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sub Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownGenres"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sub Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sub Menu</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sub Menu</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sub Categories</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sub Categories</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Browse All</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Plants</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownSeeds"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Seeds
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownSeeds"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="Flower_Seeds.html"
+                        >Flower seeds</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Vegetable Seeds</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Herb seeds</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New Arraivals</a>
+                </li>
+              </ul>
+
+              <div class="search-group d-flex align-items-baseline">
+                <form class="input-group d-flex mt-3 mt-lg-0" role="search">
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-success"
+                    type="submit"
+                    title="search"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+                <button
+                  type="button"
+                  class="btn btn-outline-success rounded-pill ms-md-3 me-md-2 d-none d-sm-block"
                 >
-                  Seeds
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="Flower_Seeds.html"
-                      >Flower seeds</a
-                    >
-                  </li>
-                  <li><a class="dropdown-item" href="#">Vegetable Seeds</a></li>
-                  <!-- <li><hr class="dropdown-divider"></li> -->
-                  <li><a class="dropdown-item" href="#">Herb seeds</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Tools</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"> New Arrivals</a>
-              </li>
-            </ul>
-            <form>
-              
-                <label class="formn-label d-flex search-group">
-                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search">
-                  <button class="btn btn-success fa fa-search"></button>
-              </label>
-                
-            </form>
-            <a class="navbar-brand" href="#">
-              <img src="assets/Add to card.png" alt="" height="40" />
-            </a>
-            <div>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(45, 44, 41);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 8px;
-                  background: #629e5c;
-                  border: 1px solid #6af77d;
-                  text-decoration: none;
-                "
-              >
-                Log in</a
-              >
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+                <a
+                  href="#"
+                  class="btn btn-outline-success rounded-circle d-none d-sm-block"
+                  title="user-login"
+                  ><i class="fa fa-user"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <!-- navbar ends -->
-    <!-- this is my slider   -->
-
+    <!-- New Slider -->
     <div
-      id="carouselExampleControls"
-      class="carousel slide"
-      data-bs-ride="carousel"
+      class="splide d-sm-block d-none"
+      role="group"
+      aria-label="Splide Basic HTML Example"
     >
-      <div class="carousel-inner  ">
-        <div class="carousel-item active slogan-parent">
-          <img
-            src="assets/background.jpg"
-            class="d-block w-100"
-            alt="..."
-            width="2121px"
-            height="600vh"
-          />
-          <div class="slogan">
-            <h1>Nurture Your Home with Nature</h1>
-            <p class="display-2" style="font-size: 2rem;">Transform Your Space with Dharaplant: Indoor Greenery, Delivered.</p>
-          </div>
-          
-        </div>
-        <div class="carousel-item slogan-parent">
-          <img
-            src="assets/background2.jpg"
-            class="d-block w-100"
-            alt="plants"
-            width="2121px"
-            height="600vh"
-          />
-          <div class="slogan">
-            <h1>Nurture Your Home with Nature</h1>
-            <p class="display-2 bg-tertiary" style="font-size: 2rem;">Transform Your Space with Dharaplant: Indoor Greenery, Delivered.</p>
-          </div>
-        </div>
-        <div class="carousel-item slogan-parent">
-          <img
-            src="assets/background3.jpg"
-            class="d-block w-100"
-            alt=""
-            width="2121px"
-            height="600vh"
-          />
-          <div class="slogan">
-            <h1> Greenery, Naturally at Home</h1>
-            <p class="display-2 bg-tertiary" style="font-size: 2rem;">Transform Your Space with Dharaplant: Indoor Greenery, Delivered.</p>
-          </div>
-        </div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="slogan-parent">
+              <img
+                src="assets/background.jpg"
+                class="d-block slider-img"
+                alt="slider-img-1"
+                width="100%"
+              />
+              <div class="slogan">
+                <h1>Nurture Your Home with Nature</h1>
+                <p>
+                  Transform Your Space with Dharaplant: Indoor Greenery,
+                  Delivered.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slogan-parent">
+              <img
+                src="assets/background2.jpg"
+                class="d-block slider-img"
+                alt="slider-img-2"
+                width="100%"
+              />
+              <div class="slogan">
+                <h1>Nurture Your Home with Nature</h1>
+                <p>
+                  Transform Your Space with Dharaplant: Indoor Greenery,
+                  Delivered.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slogan-parent">
+              <img
+                src="assets/background3.jpg"
+                class="d-block slider-img"
+                alt="slider-img-3"
+                width="100%"
+              />
+              <div class="slogan">
+                <h1>Greenery, Naturally at Home</h1>
+                <p>
+                  Transform Your Space with Dharaplant: Indoor Greenery,
+                  Delivered.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-    <!-- end of slidbar -->
+    <script>
+      var splide = new Splide(".splide", {
+        type: "loop",
+        padding: "12rem",
+      });
+
+      splide.mount();
+    </script>
+    <!-- New Slider end -->
 
     <!-- this is first items -->
     <div class="container mt-5">
-      <div class="row border py-3 mb-3">
-        <!-- Card 1 -->
-        <div class="col-md-3" style="border-radius: 55px">
+      <!-- Card 1 -->
+      <div class="row border py-3 mb-3 gy-3">
+        <div class="col-md-3 col-sm-6 px-sm-2 px-5">
           <div class="card">
             <img
               src="assets/img1.png"
-              class="card-img-top"
+              class="card-img-top square-img"
               alt="Card image 1"
-              style="border-bottom-left-radius: 15px 15px"
             />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
-              <h6 class="card-title">
-                <span class="fa fa-star checked"></span>
-                4.8|126
+                <span class="rating-and-review">3.8|126</span>
               </h6>
+              <p class="card-title h5">Aralia Golden Plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
 
-              <p class="card-text">Aralia Golden Plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 px-sm-2 px-5">
+          <div class="card">
+            <img
+              src="assets/img1.png"
+              class="card-img-top square-img"
+              alt="Card image 1"
+            />
+            <div class="card-body">
+              <h6 class="card-title d-flex justify-content-between">
+                <div class="rating-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+
+                <span class="rating-and-review">3.8|126</span>
+              </h6>
+              <p class="card-title h5">Aralia Golden Plant</p>
+              <form class="d-flex">
+                <div class="input-group">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button minus-btn"
+                  >
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="form-control w-25 text-center quantity"
+                    value="0"
+                    min="0"
+                    max="10"
+                  />
+                  <button
+                    class="btn btn-outline-secondary plus-btn"
+                    type="button"
+                  >
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+
+                <a href="#" class="btn btn-outline-success ms-sm-5 ms-3">
+                  <i class="bi bi-cart-plus-fill"></i>
+                </a>
+              </form>
             </div>
           </div>
         </div>
@@ -239,32 +436,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">Jade plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -277,32 +456,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">Areca Plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -315,32 +476,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">Tulasi Plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -353,32 +496,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">Lily Plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -391,32 +516,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">ZZ plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -429,32 +536,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">Money Plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -467,32 +556,14 @@
               alt="Card image 1"
             />
 
-            <div class="card-body" style="border: 1px solid #fafaf2">
+            <div class="card-body">
               <h6 class="card-title">
                 <span class="fa fa-star checked"></span>
                 4.8|126
               </h6>
 
               <p class="card-text">Rubber Plant</p>
-              <a
-                href="#"
-                class=" "
-                style="
-                  color: rgb(249, 240, 227);
-                  display: flex;
-                  flex-direction: row-reverse;
-                  gap: 10px;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 10px 10px;
-                  border-radius: 25px;
-                  background: #1c6644;
-                  border: 1px solid #39433e;
-                  text-decoration: none;
-                "
-              >
-                ADD TO Cart</a
-              >
+              <a href="#" class="btn btn-outline-success"> Add to Cart</a>
             </div>
           </div>
         </div>
@@ -546,7 +617,7 @@
             <input type="checkbox" id="subscription" name="subsccription" />
             <label for="brands">Get it by Tomorrow</label><br />
             <br />
-            <br>
+            <br />
 
             <h4>Sunlight Exposure</h4>
 
@@ -561,7 +632,7 @@
 
             <input type="checkbox" id="Partial Sun" name="Partial Sun" />
             <label for="Partial Sun">Partial Sun</label><br />
-            <br><br>
+            <br /><br />
 
             <h4>Special Features</h4>
 
@@ -607,7 +678,7 @@
             <label for="Rabbit Resstant">Rabbit Resstant</label><br />
           </form>
         </div>
-        
+
         <!-- Featured categories -->
         <div class="col-9 border-start">
           <div class="row border-bottom pb-2">
@@ -616,13 +687,11 @@
               <div class="card">
                 <img
                   src="assets/asset 9.jpeg"
-                  class="card-img-top"
+                  class="card-img-top square-img"
                   alt="..."
                 />
                 <div class="card-body">
-                  <p class="card-text">
-                    Cacti &amp; Succulents
-                  </p>
+                  <p class="card-text">Cacti &amp; Succulents</p>
                 </div>
               </div>
             </div>
@@ -634,9 +703,7 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <p class="card-text">
-                    Bamboo
-                  </p>
+                  <p class="card-text">Bamboo</p>
                 </div>
               </div>
             </div>
@@ -648,9 +715,7 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <p class="card-text">
-                    Bonsai
-                  </p>
+                  <p class="card-text">Bonsai</p>
                 </div>
               </div>
             </div>
@@ -667,10 +732,9 @@
                 />
                 <div class="card-body">
                   <p class="card-text">
-                    Rs. 350.00 <br>
-                    
-                    Lucky Bamboo 3
-                    Layer Feng Shui Plant...
+                    Rs. 350.00 <br />
+
+                    Lucky Bamboo 3 Layer Feng Shui Plant...
                   </p>
                 </div>
               </div>
@@ -684,9 +748,9 @@
                 />
                 <div class="card-body">
                   <p class="card-text">
-                   Rs. 250.00 <br>
-                   Good Luck Jade <br>
-                   Plant with self wateri...
+                    Rs. 250.00 <br />
+                    Good Luck Jade <br />
+                    Plant with self wateri...
                   </p>
                 </div>
               </div>
@@ -700,10 +764,9 @@
                 />
                 <div class="card-body">
                   <p class="card-text">
-                  RS. 1,449.00 <br>
+                    RS. 1,449.00 <br />
 
-                  Amulya Farms Lucky 
-                  Wood Good Luck Live...
+                    Amulya Farms Lucky Wood Good Luck Live...
                   </p>
                 </div>
               </div>
@@ -721,9 +784,9 @@
                 />
                 <div class="card-body">
                   <p class="card-text">
-                   Rs. 1,399.00 <br>
-                   Garden Art(PACK OF 1)
-                   <br>Brazilian Lucky B
+                    Rs. 1,399.00 <br />
+                    Garden Art(PACK OF 1)
+                    <br />Brazilian Lucky B
                   </p>
                 </div>
               </div>
@@ -734,13 +797,12 @@
                   src="assets/asset 98.jpeg"
                   class="card-img-top"
                   alt="..."
-                >
+                />
                 <div class="card-body">
                   <p class="card-text">
-                    799.00 <br>
-                    Amulya Farms Bamboo <br>
+                    799.00 <br />
+                    Amulya Farms Bamboo <br />
                     Lucky Wood Plant
-      
                   </p>
                 </div>
               </div>
@@ -751,14 +813,11 @@
                   src="assets/asset 30.jpeg"
                   class="card-img-top"
                   alt="..."
-                >
+                />
                 <div class="card-body">
                   <p class="card-text">
-                  199.00 <br>
-                  Lucky Bamboo Plant |
-                  Lucky Bamboo Stricks..
-
-
+                    199.00 <br />
+                    Lucky Bamboo Plant | Lucky Bamboo Stricks..
                   </p>
                 </div>
               </div>
@@ -768,15 +827,11 @@
             <h2>Most Wished for</h2>
             <div class="col-4">
               <div class="card">
-                <img
-                  src="assets/asset A.jpeg"
-                  class="card-img-top"
-                  alt="..."
-                />
+                <img src="assets/asset A.jpeg" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">
-                    Rs. 450.00 <br>
-                    
+                    Rs. 450.00 <br />
+
                     Dracaena trifasciata
                   </p>
                 </div>
@@ -791,24 +846,20 @@
                 />
                 <div class="card-body">
                   <p class="card-text">
-                  Rs. 350.00 <br>
-                  Lily Plant
+                    Rs. 350.00 <br />
+                    Lily Plant
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-4">
               <div class="card">
-                <img
-                  src="assets/assetC.jpeg"
-                  class="card-img-top"
-                  alt="..."
-                />
+                <img src="assets/assetC.jpeg" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">
-                  RS. 1,449.00 <br>
+                    RS. 1,449.00 <br />
 
-                  Fukien tea 
+                    Fukien tea
                   </p>
                 </div>
               </div>
@@ -825,43 +876,41 @@
                 />
                 <div class="card-body">
                   <p class="card-text">
-                    Rs. 350.00 <br>
-                    
-                    Lucky Bamboo 3
-                    Layer Feng Shui Plant...
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="assets/asset 43.jpeg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                  Rs. 250.00 <br>
-                  Good Luck Jade <br>
-                  Plant with self wateri...
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="assets/asset 43.jpeg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                  RS. 1,449.00 <br>
+                    Rs. 350.00 <br />
 
-                  Amulya Farms Lucky 
-                  Wood Good Luck Live...
+                    Lucky Bamboo 3 Layer Feng Shui Plant...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/asset 43.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Rs. 250.00 <br />
+                    Good Luck Jade <br />
+                    Plant with self wateri...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <img
+                  src="assets/asset 43.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    RS. 1,449.00 <br />
+
+                    Amulya Farms Lucky Wood Good Luck Live...
                   </p>
                 </div>
               </div>
@@ -869,7 +918,6 @@
           </div>
         </div>
       </div>
-   
     </div>
     <!-- Footer start -->
     <footer class="py-5 bg-success">
